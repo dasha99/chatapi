@@ -23,6 +23,22 @@ people_schema = {
         # 'lastname' is an API entry-point, so we need it to be unique.
         'unique': True,
     },
+    'age': {
+        'type': 'int',
+    },
+     'sex': {
+        'type': 'string',
+        'minlength': 1,
+        'maxlength': 2,
+    },
+     'martial_status': {
+        'type': 'string',
+        'minlength': 1,
+        'maxlength': 15,
+    },
+    'height': {
+        'type': 'int',
+    },
     # 'role' is a list, and can only contain values from 'allowed'.
     'role': {
         'type': 'list',
