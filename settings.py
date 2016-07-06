@@ -1,10 +1,13 @@
+import os
 
-MONGO_HOST = 'localhost'
-MONGO_PORT = 27017
+MONGO_HOST = os.environ.get('MONGO_HOST', 'localhost')
+MONGO_PORT = os.environ.get('MONGO_PORT', 27017)
+MONGO_USERNAME = os.environ.get('MONGO_USERNAME', '')
+MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', '')
+MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'chatapi')
 
 # Skip these if your db has no auth. But it really should.
 
-MONGO_DBNAME = 'chatapi'
 
 people_schema = {
     # Schema definition, based on Cerberus grammar. Check the Cerberus project
