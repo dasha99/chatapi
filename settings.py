@@ -12,12 +12,12 @@ MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'chatapi')
 people_schema = {
     # Schema definition, based on Cerberus grammar. Check the Cerberus project
     # (https://github.com/nicolaiarocci/cerberus) for details.
-    'firstname': {
+    'name': {
         'type': 'string',
         'minlength': 1,
         'maxlength': 10,
     },
-    'lastname': {
+    'username': {
         'type': 'string',
         'minlength': 1,
         'maxlength': 15,
