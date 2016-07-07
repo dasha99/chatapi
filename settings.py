@@ -35,7 +35,7 @@ people_schema = {
      'sex': {
         'type': 'string',
         'minlength': 1,
-        'maxlength': 2,
+        'maxlength': 7,
     },
      'martial_status': {
         'type': 'string',
