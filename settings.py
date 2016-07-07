@@ -73,7 +73,7 @@ people = {
     # additional read-only entry point. This way consumers can also perform
     # GET requests at '/people/<username>'.
     'additional_lookup': {
-        'url': 'regex("[\%20]+")',
+        'url': 'regex("(?![%20])\w+")',
         'field': 'username'
     },
 
