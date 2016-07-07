@@ -27,7 +27,10 @@ people_schema = {
         'unique': True,
     },
     'age': {
-        'type': 'int',
+        'type': 'integer',
+    },
+    'weight': {
+        'type': 'integer',
     },
      'sex': {
         'type': 'string',
@@ -40,7 +43,7 @@ people_schema = {
         'maxlength': 15,
     },
     'height': {
-        'type': 'int',
+        'type': 'integer',
     },
     # 'role' is a list, and can only contain values from 'allowed'.
     'role': {
