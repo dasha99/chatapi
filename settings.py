@@ -71,10 +71,10 @@ people = {
     # by default the standard item entry point is defined as
     # '/people/<ObjectId>'. We leave it untouched, and we also enable an
     # additional read-only entry point. This way consumers can also perform
-    # GET requests at '/people/<lastname>'.
+    # GET requests at '/people/<username>'.
     'additional_lookup': {
         'url': 'regex("[\w]+")',
-        'field': 'lastname'
+        'field': 'username'
     },
 
     # We choose to override global cache-control directives for this resource.
