@@ -87,8 +87,6 @@ booking_schema = {
         'type': 'string',
         'minlength': 1,
         'maxlength': 10,
-     # 'booking_type' need it to be unique.
-        'unique': True,
     },
     'username': {
         'type': 'string',
@@ -98,6 +96,8 @@ booking_schema = {
     },
     'booking_id': {
         'type': 'integer',
+        # 'booking_type' need it to be unique.
+        'unique': True,
     },
     'from_loc': {
         'type': 'string',
