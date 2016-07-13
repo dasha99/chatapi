@@ -11,7 +11,6 @@ MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'chatapi')
 
 people_schema = {
     # Schema definition, based on Cerberus grammar. Check the Cerberus project
-    # (https://github.com/nicolaiarocci/cerberus) for details.
     'name': {
         'type': 'string',
         'minlength': 1,
@@ -88,7 +87,6 @@ people = {
 
 booking_schema = {
     # Schema definition, based on Cerberus grammar. Check the Cerberus project
-    # (https://github.com/nicolaiarocci/cerberus) for details.
     'booking_type': {
         'type': 'string',
         'minlength': 1,
@@ -129,9 +127,9 @@ booking = {
     'item_title': 'booking',
 
     # by default the standard item entry point is defined as
-    # '/people/<ObjectId>'. We leave it untouched, and we also enable an
+    # '/booking/<ObjectId>'. We leave it untouched, and we also enable an
     # additional read-only entry point. This way consumers can also perform
-    # GET requests at '/people/<username>'.
+    # GET requests at '/booking/<username>'.
     'additional_lookup': {
         'url': 'regex("(?![%20])\w+")',
         'field': 'username'
