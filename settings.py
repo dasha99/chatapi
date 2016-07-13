@@ -7,19 +7,16 @@ MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD', '')
 MONGO_DBNAME = os.environ.get('MONGO_DBNAME', 'chatapi')
 
 # Skip these if your db has no auth. But it really should.
-
-
 people_schema = {
-    # Schema definition, based on Cerberus grammar. Check the Cerberus project
     'name': {
         'type': 'string',
         'minlength': 1,
-        'maxlength': 10,
+        'maxlength': 50,
     },
     'username': {
         'type': 'string',
         'minlength': 1,
-        'maxlength': 15,
+        'maxlength': 25,
         'required': True,
         # talk about hard constraints! For the purpose of the demo
         # 'lastname' is an API entry-point, so we need it to be unique.
@@ -86,20 +83,18 @@ people = {
 }
 
 booking_schema = {
-    # Schema definition, based on Cerberus grammar. Check the Cerberus project
     'booking_type': {
         'type': 'string',
         'minlength': 1,
         'maxlength': 10,
+     # 'booking_type' need it to be unique.
+        'unique': True,
     },
     'username': {
         'type': 'string',
         'minlength': 1,
-        'maxlength': 15,
+        'maxlength': 25,
         'required': True,
-        # talk about hard constraints! For the purpose of the demo
-        # 'lastname' is an API entry-point, so we need it to be unique.
-        'unique': True,
     },
     'booking_id': {
         'type': 'integer',
